@@ -15,86 +15,73 @@ struct ContentView: View {
     @State var timeStr = "00:00:00"
     var body: some View {
         ZStack {
-            Rectangle()
+            Rectangle() // Background
                 .ignoresSafeArea()
                 .foregroundColor(Color("BGColor"))
-            HStack {    // CLOCK
-                Group {     // HOURS
-                    VStack {            // HOURS 2
-                        Spacer()
-                        Circle()
-                            .circleMod(state: Row2(timeVal: timeStr[0]))
-                        Circle()
-                            .circleMod(state: Row1(timeVal: timeStr[0]))
-                        Spacer()
-                            .frame(height: 30)
+            
+            VStack {
+                Spacer()
+                HStack(alignment: .bottom) {    // CLOCK
+                    Group {     // HOURS
+                        VStack {            // HOURS 2
+                            Circle()
+                                .circleMod(state: Row2(timeVal: timeStr[0]))
+                            Circle()
+                                .circleMod(state: Row1(timeVal: timeStr[0]))
+                        }
+                        VStack {            // HOURS 1
+                            Circle()
+                                .circleMod(state: Row8(timeVal: timeStr[1]))
+                            Circle()
+                                .circleMod(state: Row4(timeVal: timeStr[1]))
+                            Circle()
+                                .circleMod(state: Row2(timeVal: timeStr[1]))
+                            Circle()
+                                .circleMod(state: Row1(timeVal: timeStr[1]))
+                        }
                     }
-                    VStack {            // HOURS 1
-                        Spacer()
-                        Circle()
-                            .circleMod(state: Row8(timeVal: timeStr[1]))
-                        Circle()
-                            .circleMod(state: Row4(timeVal: timeStr[1]))
-                        Circle()
-                            .circleMod(state: Row2(timeVal: timeStr[1]))
-                        Circle()
-                            .circleMod(state: Row1(timeVal: timeStr[1]))
-                        Spacer()
-                            .frame(height: 30)
+                    Group {     // MINUTES
+                        VStack {            // MINUTES 2
+                            Circle()
+                                .circleMod(state: Row4(timeVal: timeStr[3]))
+                            Circle()
+                                .circleMod(state: Row2(timeVal: timeStr[3]))
+                            Circle()
+                                .circleMod(state: Row1(timeVal: timeStr[3]))
+                        }
+                        VStack {            // MINUTES 1
+                            Circle()
+                                .circleMod(state: Row8(timeVal: timeStr[4]))
+                            Circle()
+                                .circleMod(state: Row4(timeVal: timeStr[4]))
+                            Circle()
+                                .circleMod(state: Row2(timeVal: timeStr[4]))
+                            Circle()
+                                .circleMod(state: Row1(timeVal: timeStr[4]))
+                        }
                     }
-                }
-                Group {     // MINUTES
-                    VStack {            // MINUTES 2
-                        Spacer()
-                        Circle()
-                            .circleMod(state: Row4(timeVal: timeStr[3]))
-                        Circle()
-                            .circleMod(state: Row2(timeVal: timeStr[3]))
-                        Circle()
-                            .circleMod(state: Row1(timeVal: timeStr[3]))
-                        Spacer()
-                            .frame(height: 30)
-                    }
-                    VStack {            // MINUTES 1
-                        Spacer()
-                        Circle()
-                            .circleMod(state: Row8(timeVal: timeStr[4]))
-                        Circle()
-                            .circleMod(state: Row4(timeVal: timeStr[4]))
-                        Circle()
-                            .circleMod(state: Row2(timeVal: timeStr[4]))
-                        Circle()
-                            .circleMod(state: Row1(timeVal: timeStr[4]))
-                        Spacer()
-                            .frame(height: 30)
-                    }
-                }
-                Group {     // SECONDS
-                    VStack {            // SECONDS 2
-                        Spacer()
-                        Circle()
-                            .circleMod(state: Row4(timeVal: timeStr[6]))
-                        Circle()
-                            .circleMod(state: Row2(timeVal: timeStr[6]))
-                        Circle()
-                            .circleMod(state: Row1(timeVal: timeStr[6]))
-                        Spacer()
-                            .frame(height: 30)
-                    }
-                    VStack {            // SECONDS 1
-                        Spacer()
-                        Circle()
-                            .circleMod(state: Row8(timeVal: timeStr[7]))
-                        Circle()
-                            .circleMod(state: Row4(timeVal: timeStr[7]))
-                        Circle()
-                            .circleMod(state: Row2(timeVal: timeStr[7]))
-                        Circle()
-                            .circleMod(state: Row1(timeVal: timeStr[7]))
-                        Spacer()
-                            .frame(height: 30)
+                    Group {     // SECONDS
+                        VStack {            // SECONDS 2
+                            Circle()
+                                .circleMod(state: Row4(timeVal: timeStr[6]))
+                            Circle()
+                                .circleMod(state: Row2(timeVal: timeStr[6]))
+                            Circle()
+                                .circleMod(state: Row1(timeVal: timeStr[6]))
+                        }
+                        VStack {            // SECONDS 1
+                            Circle()
+                                .circleMod(state: Row8(timeVal: timeStr[7]))
+                            Circle()
+                                .circleMod(state: Row4(timeVal: timeStr[7]))
+                            Circle()
+                                .circleMod(state: Row2(timeVal: timeStr[7]))
+                            Circle()
+                                .circleMod(state: Row1(timeVal: timeStr[7]))
+                        }
                     }
                 }
+                Spacer()
             }
         }
         .onReceive(timer) { time in
