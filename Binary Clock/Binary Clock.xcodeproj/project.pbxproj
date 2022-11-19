@@ -13,7 +13,6 @@
 		A8776F5F27114338000DDD6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8776F5E27114338000DDD6A /* Preview Assets.xcassets */; };
 		A8776F6627114350000DDD6A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8776F6527114350000DDD6A /* StringExt.swift */; };
 		A8776F6827114C7F000DDD6A /* rowFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8776F6727114C7F000DDD6A /* rowFuncs.swift */; };
-		A8D3D08528A721AE00C5564A /* DeviceRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3D08428A721AE00C5564A /* DeviceRotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		A8776F5E27114338000DDD6A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8776F6527114350000DDD6A /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		A8776F6727114C7F000DDD6A /* rowFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rowFuncs.swift; sourceTree = "<group>"; };
-		A8D3D08428A721AE00C5564A /* DeviceRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				A83E9B692711FC1D00E0AD98 /* Binary-Clock-Info.plist */,
 				A8776F5727114337000DDD6A /* Binary_ClockApp.swift */,
 				A8776F5927114337000DDD6A /* ContentView.swift */,
-				A8D3D08428A721AE00C5564A /* DeviceRotation.swift */,
 				A8776F6727114C7F000DDD6A /* rowFuncs.swift */,
 				A8776F6527114350000DDD6A /* StringExt.swift */,
 				A8776F5B27114338000DDD6A /* Assets.xcassets */,
@@ -153,7 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8776F6827114C7F000DDD6A /* rowFuncs.swift in Sources */,
-				A8D3D08528A721AE00C5564A /* DeviceRotation.swift in Sources */,
 				A8776F5A27114337000DDD6A /* ContentView.swift in Sources */,
 				A8776F6627114350000DDD6A /* StringExt.swift in Sources */,
 				A8776F5827114337000DDD6A /* Binary_ClockApp.swift in Sources */,
@@ -214,7 +210,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -269,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -299,9 +295,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,9 +333,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

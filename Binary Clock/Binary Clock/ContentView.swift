@@ -10,9 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var timeStr = "00:00:00"
-    @State private var orientation = UIDeviceOrientation.portrait // Default setting
     
     @State var offColor = Color(.systemGray5)
     @State var onColor = Color(.systemRed)
@@ -21,18 +20,8 @@ struct ContentView: View {
         ZStack {
             Rectangle() // Background
                 .ignoresSafeArea()
-                .foregroundColor(Color("BGColor"))
+                .foregroundColor(Color(.systemGray6))
             VStack {
-                if orientation.isPortrait {
-                    Spacer()
-                    VStack {
-                        ColorPicker("On:", selection: $onColor, supportsOpacity: false)
-                        Spacer()
-                            .frame(height: 20)
-                        ColorPicker("Off:", selection: $offColor, supportsOpacity: false)
-                    }
-                    .frame(width: 80)
-                }
                 Spacer()
                 HStack(alignment: .bottom) {    // CLOCK
                     Group {     // HOURS
@@ -105,10 +94,6 @@ struct ContentView: View {
             timeStr = stringDate
             print(timeStr)
         }
-        .onRotate { newOrientation in
-            orientation = newOrientation
-            print("Portrait: \(orientation.isPortrait)")
-        }
     }
 }
 
@@ -119,6 +104,7 @@ extension View {
     func circleMod(state isOn:Bool, on:Color, off:Color) -> some View {
         self
             .foregroundColor(isOn ? on : off)
+            .shadow(radius: isOn ? 25 : 0)
             .animation(.easeOut)
             .frame(width: 30, height: 30)
             .padding()
